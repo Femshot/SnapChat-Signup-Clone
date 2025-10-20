@@ -34,12 +34,12 @@ fun AppNavigation() {
             })
         }
         composable("second/{name}",
-//            arguments = listOf(
-//                navArgument(name = "name") {
-//                    type = NavType.StringType
-//                    defaultValue = "Fish"
-//                }
-//            )
+            arguments = listOf(
+                navArgument(name = "name") {
+                    type = NavType.StringType
+                    defaultValue = "Fish"
+                }
+            )
         ) {
             val name = it.arguments?.getString("name")
             SignIn(name = name)
